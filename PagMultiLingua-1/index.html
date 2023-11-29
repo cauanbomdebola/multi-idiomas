@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página MonyeMinds Multilíngue</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        #language-selector {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .flag {
+            width: 30px;
+            height: 20px;
+            margin-right: 5px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #content {
+            margin: 50px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+
+    <div id="language-selector">
+        <img class="flag" src="imgs/eua.png" alt="English" onclick="changeLanguage('en')">
+        <img class="flag" src="imgs/espanha.png" alt="Spanish" onclick="changeLanguage('es')">
+        <img class="flag" src="imgs/frança.png" alt="French" onclick="changeLanguage('fr')">
+    </div>
+
+    <div id="content">
+        <h1 id="title">Bem-vindo à MoneyMinds</h1>
+        <p id="content-text">No canto superior direito desta página, você encontrará as bandeiras representando
+            diferentes idiomas. Na MoneyMinds, a diversidade linguística é celebrada, e a aprendizagem é universal. Este
+            é uma página exemplo para mostrar a funcionalidade de tradução para usuários de outros países e idiomas</p>
+    </div>
+
+    <script>
+        function changeLanguage(language) {
+            const titleElement = document.getElementById('title');
+            const contentElement = document.getElementById('content-text');
+
+
+            if (language === 'en') {
+                titleElement.textContent = 'Discover a New Dimension in Professional Development with MoneyMinds!';
+                contentElement.textContent = 'At MoneyMinds, we understand that professional evolution is essential in todays dynamic world. Our courses are designed to go beyond the traditional, offering an engaging and practical learning experience that will propel your career to new heights. By choosing MoneyMinds, you are investing not just in courses but in a transformative path that will expand your professional horizons. Our instructors are experts in their fields, bringing not only theoretical knowledge but also a practical understanding of what it takes to stand out. Picture yourself mastering the intricacies of finance, attracting audiences with innovative marketing strategies, or diving into the latest technologies. At MoneyMinds, these goals are achievable. Our courses are flexible, allowing you to tailor them to your schedule, ensuring that learning is not a burden but an exciting journey. Additionally, by joining the MoneyMinds community, you connect with motivated professionals and dedicated instructors, creating valuable networks that can become catalysts for future opportunities. The investment in your professional development is a decision that yields long-term dividends, and at MoneyMinds, we are here to guide you at every step of this journey. Dont postpone advancing in your career any longer. Discover the power of continuous learning with MoneyMinds and take the next step toward a brighter professional future.';
+            } else if (language === 'es') {
+                titleElement.textContent = 'Descubre una Nueva Dimensión en Desarrollo Profesional con MoneyMinds';
+                contentElement.textContent = 'En MoneyMinds, entendemos que la evolución profesional es esencial en el mundo dinámico de hoy. Nuestros cursos están diseñados para ir más allá de lo tradicional, ofreciendo una experiencia de aprendizaje envolvente y práctica que impulsará tu carrera a nuevos niveles. Al elegir MoneyMinds, estás invirtiendo no solo en cursos, sino en un camino transformador que ampliará tus horizontes profesionales. Nuestros instructores son expertos en sus áreas, aportando no solo conocimientos teóricos, sino una comprensión práctica de lo que se necesita para destacarse. Imagínate dominando las complejidades de las finanzas, atrayendo audiencias con estrategias de marketing innovadoras o sumergiéndote en las últimas tecnologías. En MoneyMinds, estos objetivos son alcanzables. Nuestros cursos son flexibles, permitiéndote adaptarlos a tu agenda, asegurando que el aprendizaje no sea una carga, sino un viaje emocionante. Además, al unirte a la comunidad de MoneyMinds, te conectas con profesionales motivados e instructores dedicados, creando redes valiosas que pueden convertirse en catalizadores para oportunidades futuras. La inversión en tu desarrollo profesional es una decisión que rinde dividendos a largo plazo, y en MoneyMinds, estamos aquí para guiarte en cada paso de esta jornada. No pospongas más el avance en tu carrera. Descubre el poder del aprendizaje continuo con MoneyMinds y da el próximo paso hacia un futuro profesional más brillante.';
+            } else if (language === 'fr') {
+                titleElement.textContent = 'Découvrez une Nouvelle Dimension dans le Développement Professionnel avec MoneyMinds';
+                contentElement.textContent = 'Chez MoneyMinds, nous comprenons que lévolution professionnelle est essentielle dans le monde dynamique daujourdhui. Nos cours sont conçus pour aller au-delà du traditionnel, offrant une expérience dapprentissage engageante et pratique qui propulsera votre carrière vers de nouveaux sommets. En choisissant MoneyMinds, vous investissez non seulement dans des cours, mais dans un chemin transformateur qui élargira vos horizons professionnels. Nos instructeurs sont des experts dans leurs domaines, apportant non seulement des connaissances théoriques, mais aussi une compréhension pratique de ce qui est nécessaire pour se démarquer. Imaginez-vous maîtrisant les complexités des finances, attirant des publics avec des stratégies marketing innovantes ou plongeant dans les dernières technologies. Chez MoneyMinds, ces objectifs sont atteignables. Nos cours sont flexibles, vous permettant de les adapter à votre emploi du temps, garantissant que lapprentissage ne soit pas une charge, mais un voyage passionnant. De plus, en rejoignant la communauté MoneyMinds, vous vous connectez à des professionnels motivés et à des instructeurs dévoués, créant des réseaux précieux qui peuvent devenir des catalyseurs pour des opportunités futures. Linvestissement dans votre développement professionnel est une décision qui porte ses fruits à long terme, et chez MoneyMinds, nous sommes là pour vous guider à chaque étape de ce parcours. Ne remettez pas à plus tard lavancement de votre carrière. Découvrez la puissance de lapprentissage continu avec MoneyMinds et faites le prochain pas vers un avenir professionnel plus éclatant.';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
